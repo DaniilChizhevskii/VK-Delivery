@@ -7,7 +7,7 @@ from data.settings import *
 session = vk.Session()
 api = vk.API(session, v=5.80)
 
-def main ():
+def get ():
 	token_number = 0
 	token_quantity = tokens.__len__()
 	num = int(api.messages.getDialogs(access_token=tokens[0], group_id=group_id)['count'] / 200)
@@ -66,7 +66,9 @@ def send ():
 	print (gettime() + ' Delivery had sent successfully')
 	return 'ok'
 
-def gettime():
+def gettime ():
 	time = datetime.datetime.now()
 	now = time.strftime('[%d.%m.%Y %H:%M:%S]')
 	return now
+get ()
+send ()
