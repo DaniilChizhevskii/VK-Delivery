@@ -1,6 +1,5 @@
 import vk
 import json
-import requests
 import datetime
 from data.settings import *
 
