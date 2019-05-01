@@ -4,7 +4,7 @@
 [![GNU GPL](https://img.shields.io/github/license/daniilchizhevskii/vk-delivery.svg)](/)
 
 `VK Delivery` is a script for automatically sending to users of VKontakte communities.
-The script is written in `Python 3` using` VK API`.
+The script is written in `Python 3` using `VK API`.
 
 # Dependencies
 
