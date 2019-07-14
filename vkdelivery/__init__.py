@@ -59,7 +59,7 @@ def get (**kwargs):
 		return dialogs
 	except vk.exceptions.VkAPIError as error:
 		raise error
-	except Exceptions:
+	except Exception:
 		raise SystemError('One of the arguments is invalid.')
 
 def send (**kwargs):
@@ -88,7 +88,6 @@ def send (**kwargs):
 				token_number =  0
 			token = tokens[token_number]
 			try:
-				i = i
 				api.messages.send(access_token=token, user_id=dialogs[i], message=message)
 			except vk.exceptions.VkAPIError:
 				continue
@@ -101,7 +100,7 @@ def send (**kwargs):
 		return True
 	except vk.exceptions.VkAPIError as error:
 		raise error
-	except Exceptions:
+	except Exception:
 		raise SystemError('One of the arguments is invalid.')
 
 def getandsend (**kwargs):
